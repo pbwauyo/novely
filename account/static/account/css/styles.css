@@ -1,0 +1,55 @@
+.auth-header {
+    color: #007A7A;
+    background-color: #FEA02F;
+    border-radius: 10px;
+}
+
+input.auth-input {
+    color: black;
+    align-content: center;
+    background-color: #2EBCBC;
+    border-radius: 10px;
+    border-color: transparent;
+    max-width: 300px;
+    margin: auto;
+}
+
+.green-text {
+    color: #2EBCBC;
+}
+
+.orange-text {
+    color: #FEA02F;
+}
+
+.submit-btn {
+    box-shadow: none;
+    border: #FEA02F;
+    font-size: x-large;
+}
+
+.accedi-btn {
+    background-color: transparent;
+    color: #FEA02F;
+    box-shadow: none;
+    border-color: transparent;
+    font-size: larger;
+}
+
+.iscriviti-btn {
+    background-color: transparent;
+    color: #FEA02F;
+    box-shadow: none;
+    border-color: transparent;
+    font-size: larger;
+}
+
+.footer-text {
+    color: #FEA02F;
+}
+
+.error-list {
+    list-style: none;
+    list-style-type: none;
+    color: red;
+}

@@ -1,0 +1,39 @@
+body {
+    background: #007A7A;
+}
+
+.novely-header {
+    color: #FEA02F;
+    border-radius: 10px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.nav-text {
+    color:#FEA02F;
+    font-size: 19;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #FEA02F !important;
+}
+
+li { 
+    cursor: pointer; 
+}
+
+.footer-text {
+    color: #FEA02F;
+}
+
+.footer-button {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 10px;
+}

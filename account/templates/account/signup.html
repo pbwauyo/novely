@@ -1,0 +1,63 @@
+{% extends 'unauthenticated_base.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{%static 'account/css/styles.css'%}"></link>
+{% endblock css %}
+
+
+{% block content %}
+
+    <div class="container-auto my-5">
+        <form method="post" action="/account/signup/"> {% csrf_token %}
+             <div class="text-center">
+                <button type='submit' class="auth-header px-5 py-1 my-5 submit-btn">Iscriviti</button>
+            </div>
+            <div class='form-group'>
+                <input class="form-control auth-input" type='text' placeholder='Name' name='name'>
+                {% if signup_form.name.errors %}
+                    <div class='text-center'>
+                        <h6 class='text-danger'>{{signup_form.name.errors | striptags}}</h6>
+                    </div>
+                {% endif %}
+            </div>
+            <div class='form-group'>
+                <input class="form-control auth-input" type='email' placeholder='Email' name='email'>
+                {% if signup_form.email.errors %}
+                    <div class='text-center'>
+                        <h6 class='text-danger'>{{signup_form.email.errors | striptags}}</h6>
+                    </div>
+                {% endif %}
+            </div>
+            <div class='form-group'>
+                <input class="form-control auth-input" type='password' placeholder='Password' name='password1'>
+            </div>
+
+            <div class='form-group'>
+                <input class="form-control auth-input" type='password' placeholder='Confirm Password' name='password2'>
+                {% if signup_form.password2.errors %}
+                    <div class='text-center'>
+                        <h6 class='text-danger'>{{signup_form.passsword2.errors | striptags}}</h6>
+                    </div>
+                {% endif %}
+            </div>
+
+            {% if signup_form.non_field_errors %}
+                <div class='text-center'>
+                    <h6 class='text-danger'>{{signup_form.non_field_errors | striptags}}</h6>
+                </div>
+            {% endif %}
+           
+        </form>
+
+        <div class="d-flex justify-content-center green-text mt-5">
+            <h5>se sei già iscritto</h5>
+        </div>
+        <div class="d-flex justify-content-center orange-text">
+            <button class='accedi-btn' type='button'>Accedi</button>
+        </div>    
+    </div>
+
+    
+    
+{% endblock content %}
