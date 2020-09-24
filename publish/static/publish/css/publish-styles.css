@@ -1,0 +1,35 @@
+.rounded-corners {
+    border-radius: 8px;
+}
+
+.borderless-button {
+    border-color: transparent;
+}
+
+.green-text {
+    color: #007A7A;
+}
+
+.green-background{
+    background-color:#007A7A;
+}
+
+.orange-text {
+    color: #FEA02F;
+}
+
+.orange-background{
+    background-color: #FEA02F;
+}
+
+a { 
+    cursor: pointer; 
+}
+
+.small-text {
+    font-size: 13;
+}
+
+.yellow-background {
+    background-color: #F7FF00;
+}

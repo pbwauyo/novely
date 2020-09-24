@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+def publish(request):
+
+    return render(request, 'publish/publish.html', {})
+
+def publish_new(request):
+    return render(request, 'publish/publish_new.html', {})

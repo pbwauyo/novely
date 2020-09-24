@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'publish/css/publish-styles.css' %}">
+{% endblock css %}
+    
+
+{% block content %}
+    <div class="ml-4">
+        <h3 class="orange-text ml-4">Pubblica la tua storia</h3>
+        <div style="background-color: #FEA02F; max-width:250px; height:3px;"></div>    
+    </div>
+
+    <div class="container-fluid orange-background mt-3 rounded-corners" style="height: 250;">
+        <div>
+            <h5 class="green-text font-weight-bold">Pubblica nuovo contenuto! *</h5>
+            <h6 class="green-text">Pubblica e guadagna dai tuoi contenuti</h6>
+        </div>
+
+        <div class="row">
+            <div class="col-lg">
+                <div class="d-flex justify-content-center">
+                    <h1 class="green-text align-self-center mr-3">1</h1>
+                    <div class"d-flex flex-direction-vertical">
+                        <img src="{% static 'publish/images/publica.svg' %}" width=100 height=50>
+                        <p class="green-text mt-1">Pubblica</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg">
+                <div class="d-flex justify-content-center">
+                    <h1 class="green-text align-self-center mr-3">2</h1>
+                    <div style="width:100px;">
+                        <h3 class="green-text mt-1">Rispetta le leggi!</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg">
+                <div class="d-flex justify-content-center">
+                    <h1 class="green-text align-self-center mr-3">3</h1>
+                    <div class"d-flex flex-direction-vertical">
+                        <img src="{% static 'publish/images/share.svg' %}" width=100 height=50>
+                        <p class="green-text mt-1">Condividi, emoziona e guadagna</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button class="borderless-button green-background rounded-corners px-3">
+                <a class="orange-text" href="{% url 'publish-new' %}">Pubblica</a>
+            </button>
+        </div>
+
+        <div>
+            <p class="green-text mt-4 small-text">*Se il contenuto non è tuo chiedi sempre l'autorizzazione all'autore. #Copyright</p>
+        </div>   
+    </div>
+
+    <div class="pl-3 mt-3">
+        <h6 class="orange-text">Pubblicati da te - osserva le performance, modifica e promuovi i tuoi contenuti</h6>
+
+        <div class="d-flex">
+            <div class="card shadow green-background mr-2" style="width: 140;">
+                <img class="card-img-top" alt="sample image" src="{% static 'publish/images/sample_book.png' %}" height=80>
+                <div class="card-body">
+                    <h5 class="card-title orange-text">Title here</h5>
+                    <h6 class="orange-text">Author here </h6>
+                </div>
+            </div>
+
+            <div class="card shadow green-background mr-2" style="width: 140;">
+                <img class="card-img-top" alt="sample image" src="{% static 'publish/images/sample_book.png' %}" height=80>
+                <div class="card-body">
+                    <h5 class="card-title orange-text">Title here</h5>
+                    <h6 class="orange-text">Author here </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid yellow-background mt-3 mb-5 rounded-corners pb-3" >
+         <div>
+            <h5 class="green-text font-weight-bold">Novellers exchange</h5>
+            <h6 class="green-text">Il posto dove lettori e autori si trovano per creare audiostories </h6>
+        </div>
+
+        <div class="card shadow green-background mr-2" style="width: 140;">
+            <img class="card-img-top" alt="sample image" src="{% static 'publish/images/sample_book.png' %}" height=80>
+            <div class="card-body">
+                <h5 class="card-title orange-text">Title here</h5>
+                <h6 class="orange-text">Author here </h6>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
