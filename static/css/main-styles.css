@@ -1,5 +1,6 @@
-body {
+body, html {
     background: #007A7A;
+    height:100%;
 }
 
 .novely-header {
@@ -7,12 +8,7 @@ body {
     border-radius: 10px;
 }
 
-.footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin: auto;
-}
+
 
 .nav-text {
     color:#FEA02F;

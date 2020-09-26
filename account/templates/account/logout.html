@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/shared_styles.css' %}">
+{% endblock css %}
+
+{% block content %}
+ 
+
+    <div class="mx-4 mt-2">
+        <span class="orange-text ml-4" style="font-size:25px">See you next time!</span>
+        <div style="background-color: #FEA02F; max-width:190px; height:3px;"></div>
+        
+        <h6 class="light-green-text mt-4 mb-1">Before you go! write to us and help us improve the platform</h6>
+        <button class="orange-text borderless-button green-background rounded-corners shadow py-2 px-3" type="buton" data-toggle="modal" data-target="#improveForm">
+            Help us improve
+        </button>
+
+        <h6 class="light-green-text mt-4 mb-1">Before you go! Support us if you like Novely</h6>
+        <button class="orange-text borderless-button green-background rounded-corners shadow py-2 px-3">
+            Donate to <img src="{% static 'images/logo_circles.png' alt="logo circles"%}" width=10 height=15><span class="orange-text">Novely</span></img>
+        </button>
+    </div>
+
+    <div class="d-flex justify-content-center mx-5">
+        <button class="green-text borderless-button orange-background rounded-corners shadow py-2 px-5">
+            Logout
+        </button>
+    </div>
+        
+    
+
+{% endblock content %}
+
+{% block modal %}
+    </div>
+        <div class="modal fade" id="improveForm" role="dialog" tabindex="-1" aria-labelledby="lable" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content shadow rounded-corners">
+                    <div class="modal-body green-background">
+                        <div class="container-fluid ">
+                            <div class="row">
+                                <div class="col align-items-center">
+                                    <h5 class="orange-text">Help us improve</h5>
+                                    <h5 class="light-green-text">what works and what not? help us </h5>
+
+                                    <input class="green-transparent-background borderless-button  rounded-corners orange-placeholder pl-3 mt-3" style="max-width:400px;">
+                                    <textarea class="green-transparent-background borderless-button  rounded-corners orange-placeholder pl-3 mt-3" style="max-width:400px; height:80px;"></textarea>
+
+                                    <div class="d-flex justify-content-center">
+                                        <button class="green-text borderless-button mx-auto mt-3 orange-background rounded-corners shadow py-2 px-5">
+                                            Submit
+                                        </button>
+                                    </div>   
+
+                                </div>
+                            </div>
+                        </div>
+                    <div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock modal %}
