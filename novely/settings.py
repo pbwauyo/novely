@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'core',
     'publish',
     'userprofile',
+    'listen',
 ]
 
 MIDDLEWARE = [
