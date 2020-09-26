@@ -2,6 +2,20 @@
     border-radius: 8px;
 }
 
+.rounded-corners-left {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.rounded-corners-right {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;;
+}
+
+.orange-border {
+    border: 2px solid #FEA02F;
+}
+
 .borderless-button {
     border-color: transparent;
 }
@@ -32,4 +46,45 @@ a {
 
 .yellow-background {
     background-color: #F7FF00;
+}
+
+.green-transparent-background {
+    background-color: rgba(0, 93, 93, 0.9);
+}
+
+.add {
+    position: relative;
+    right: 50%;
+}
+
+.orange-input::placeholder {
+    color: #FEA02F;
+}
+
+.orange-input{
+    color:white;
+}
+
+.green-input::placeholder {
+    color: #FEA02F;
+}
+
+.green-input{
+    color:white;
+}
+
+.light-green-input::placeholder{
+    color: #2EBCBC;
+}
+
+.light-green-input{
+    color: white;
+}
+
+.light-green-text {
+    color: #2EBCBC;
+}
+
+.light-green-bg {
+    background-color: #2EBCBC;
 }

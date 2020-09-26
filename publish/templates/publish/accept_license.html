@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href= {% static 'publish/css/publish-styles.css' %}>
+{% endblock css %}
+
+{% block content %}
+    <div class="mx-5 my-3">
+        <h1 class="orange-text">Rispetta le leggi!</h1>
+
+        <h5 class="orange-text">ATTENZIONE!</h5>
+        <div class="rounded corners orange-border py-3 px-3">
+            <p class="orange-text">La pubblicazione di contenuti coperti da Copyright o altri diritti legali senza il possesso o previa autorizzazione da parte del possessore di tali diritti è VIETATA e perseguibile legalmente.
+                Novely non risponde in alcun modo sulla mancata osservanza delle norme legali connesse.
+                Chi pubblica si assume automaticamente la responsabilità del contenuto pubblicato.
+                ANCHE SE NON RICEVI ALCUN COMPENSO NON SEI AUTORIZZATO A PUBBLICARE 
+                MATERIALE SENZA IL CONSENSO ESPLICITO DEL SUO AUTORE/CREATORE O POSSESSOREDI DIRITTI SUL CONTENUTO!<br/><br/>
+                LA VIOLAZIONE DELLE LEGGI SUL COPYRIGHT E ALTRI DIRITTI LEGALMENTE RICONOSCIUTI
+                COSTITUISCE REATO ED E' PERTANTO PERSEGUIBILE PER LEGGE<br/><br/>
+
+                --> SE VIOLI IL COPYRIGHT FINISCI IN PRIGIONE DIRETTAMENTE SENZA PASSARE DAL VIA</p>
+        </div>
+
+        <div class="d-flex justify-content-center my-4">
+            <a class="green-text orange-background rounded-corners px-2 py-1 mr-4" style="max-width:330px;" href={% url 'publish-done' %}>
+                sono consapevole delle mie responsabilità PUBBLICA IL CONTENUTO
+           </a>
+
+            <a class="orange-text orange-border rounded-corners px-2 py-1 align-self-center" style="height: 40px">
+                Torna indietro
+            </a>
+        </div>
+    </div>
+{% endblock content %}

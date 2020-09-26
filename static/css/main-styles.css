@@ -8,7 +8,6 @@ body {
 }
 
 .footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -29,7 +28,7 @@ li {
 }
 
 .footer-text {
-    color: #FEA02F;
+    color: red;
 }
 
 .footer-button {
