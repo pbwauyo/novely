@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/shared_styles.css' %}">
+{% endblock css %}
+
+{% block content %}
+    <div class="orange-text mx-4 mt-3">
+        <h3>All Done!</h3>
+        <h3>Time to listening to some Novels</h3>
+
+        <div style="max-width:600px;" class="mt-4">
+            <h6>Enjoy your 30 days from now.</h6>
+            <h6>You will find the date of next renewal in your Profile</h6>
+        </div>
+
+        <div style="max-width:600px;" class="mt-4">
+            <img src="{% static 'images/logo_circles.png' alt="logo circles"%}" width=10 height=15><span class="orange-text">Novely WILL NOT AUTOMATICALLY RENEW YOUR 30 DAYS SUBSCRIPTION. WE WILL ASK YOU FOR PERMISSION AFEW DAYS BEFORE RENEWAL</span></img>
+        </div>
+
+        <h3 class="mt-5 mb-1">30 days for you.</h3>
+    </div>
+
+{% endblock content %}

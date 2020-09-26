@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/shared_styles.css' %}">
+{% endblock css %}
+
+{% block content %}
+    <div class="orange-text mx-4 mt-3">
+        <h3>All Done!</h3>
+        <h3>Time to listening to some Novels</h3>
+
+        <div style="max-width:600px;" class="mt-4">
+            <h6 class="orange-text">Use the N-CODE to activate your  <img src="{% static 'images/logo_circles.png' alt="logo circles"%}" width=10 height=15><span class="orange-text">Novely Gold</span></img> and your friend's</h6>
+            <h6>The left time will always be shown in your Profile section</h6>
+        </div>
+
+        <h3 class="mt-5 mb-1">100 hours.</h3>
+        <div class="d-flex mt-3">
+            <h4 class="mr-2">N-CODE</h4> 
+            <div class="rounded-corners green-transparent-background px-2 py-1">
+                <h4>Bro-nte 459.02</h4> 
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

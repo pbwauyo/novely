@@ -1,0 +1,76 @@
+.orange-text {
+    color: #FEA02F;
+}
+
+.orange-background{
+    background-color: #FEA02F;
+}
+
+a { 
+    cursor: pointer; 
+}
+
+.green-input::placeholder {
+    color: #FEA02F;
+}
+
+.orange-placeholder::placeholder{
+    color: #FEA02F;
+}
+
+.orange-placeholder{
+    color: white;
+}
+
+.green-input{
+    color:white;
+}
+
+.light-green-input::placeholder{
+    color: #2EBCBC;
+}
+
+.light-green-input{
+    color: white;
+}
+
+.light-green-text {
+    color: #2EBCBC;
+}
+
+.light-green-bg {
+    background-color: #2EBCBC;
+}
+
+.orange-border {
+    border: 2px solid #FEA02F;
+}
+
+.borderless-button {
+    border-color: transparent;
+}
+
+.green-text {
+    color: #007A7A;
+}
+
+.green-background{
+    background-color:#007A7A;
+}
+
+.yellow-background {
+    background-color: #F7FF00;
+}
+
+.green-transparent-background {
+    background-color: rgba(0, 93, 93, 0.9);
+}
+
+.rounded-corners {
+    border-radius: 8px;
+}
+
+input, textarea {
+    width: 100%;
+    display: block;
+}

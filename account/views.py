@@ -37,3 +37,6 @@ def signup_view(request):
         form = AccountCreationForm()
 
     return render(request, 'account/signup.html', {"signup_form" : form})
+
+def logout_view(request):
+    return render(request, 'account/logout.html', {})

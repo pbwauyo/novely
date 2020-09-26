@@ -21,4 +21,5 @@ urlpatterns = [
     path('account/', include('account.urls')),
     path('', include('core.urls')),
     path('publish/', include('publish.urls')),
+    path('profile/', include('userprofile.urls'))
 ]

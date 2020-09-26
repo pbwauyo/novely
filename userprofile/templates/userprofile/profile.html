@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel='stylesheet' type="text/css" href="{% static 'userprofile/css/profile_styles.css' %}">
+    <link rel='stylesheet' type="text/css" href="{% static 'css/shared_styles.css' %}">
+{% endblock css %}
+
+{% block content %}
+
+    <div class="ml-4 mt-2">
+        <h3 class="orange-text ml-4">Settings in
+            <a href="#">
+                <img src="{% static 'images/logo_circles.png' alt="logo circles"%}" width=10 height=15><span class="orange-text" style="font-size:25px">Novely</span></img>
+            </a>
+        </h3>
+        <div style="background-color: #FEA02F; max-width:250px; height:3px;"></div> 
+
+        <div class="ml-2">
+            <input class="green-transparent-background borderless-button  rounded-corners orange-placeholder pl-3 mt-3" style="max-width:400px;" placeholder="{{user.name}}">
+            <textarea class="green-transparent-background borderless-button  rounded-corners orange-placeholder pl-3 mt-3" style="max-width:400px; height:80px;">
+                To the well-organized mind, death is but  the next great adventure.
+            </textarea>
+
+            <button class="light-green-text borderless-button green-background rounded-corners shadow my-2 py-2 px-3">
+                Change
+            </button>
+
+            <div class="d-md-flex align-items-center">
+                <div style="width:20px; height:20px;" class="orange-background rounded-corners mr-2">
+                </div>
+                <h5 class="light-green-text  mt-2">I DO NOT want to access content limited for an adult audience</h5>
+            </div>
+
+            <div class="d-flex align-items-center mt-5 mb-1">
+                <h4 class="orange-text mr-4">Language</h4>
+                <a>
+                    <button class="light-green-text borderless-button green-background rounded-corners mr-2 py-2 px-3">
+                        Italiano
+                    </button>
+                </a>
+
+                 <a>
+                    <button class="orange-text borderless-button green-background rounded-corners shadow py-2 px-3">
+                        English
+                    </button>
+                </a>
+            </div>
+            <h6 class="light-green-text mt-1">(you can always find content in a language other than the selected one)</h6>
+
+            <div class="d-flex mt-5 ">
+                <h4 class="orange-text mr-4 mt-2">Payments</h4>
+
+                <div class="d-flex flex-column">
+                    <a>
+                        <button class="light-green-text borderless-button green-background rounded-corners mr-2 py-2 px-3">
+                            You can only access free contents
+                        </button>
+                    </a>
+
+                    <div class="d-flex align-items-center">
+                        <a href="{% url 'subscriptions' %}">
+                            <button class="green-text borderless-button orange-background rounded-corners mr-2 py-1 px-3">
+                                I want All contents!
+                            </button>
+                        </a>
+
+                        <a>
+                            <img src="{% static 'images/logo_circles.png' alt="logo circles"%}" width=10 height=15><span class="nav-text" style="font-size:18px">Novely Gold</span></img>
+                        </a>
+                    </div>
+
+                    <a>
+                        <button class="light-green-text borderless-button green-background rounded-corners mr-2 py-2 px-3">
+                            or insert your N-CODE
+                        </button>
+                    </a>
+
+                    <div class="d-flex">
+                        <a class="mr-2">
+                            <button class="orange-text borderless-button green-background rounded-corners shadow py-2 px-3">
+                                N-CODE
+                            </button>
+                        </a>
+
+                        <img class="align-self-center" src="{% static 'userprofile/images/question.svg' %}" width=30 height=30 data-toggle="tooltip" data-placement="auto" title="N-CODE lets you share the hours in your Hours plan to  purchase Novely Gold, the premium membership of Novely. Share N-CODE with whoever you prefer and enjoy Novely together!">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mr-2 mt-5 mb-5">
+                <a>
+                    <button class="light-green-text borderless-button green-background rounded-corners shadow py-2 px-3">
+                        Permanently delete me
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+{% endblock content %}
