@@ -1,4 +1,10 @@
+@font-face {
+    font-family: "oldNewspaperTypes";
+    src: url('../fonts/old_newspaper_types.ttf');
+}
+
 body, html {
+    font-family: "oldNewspaperTypes";
     background: #007A7A;
     height:100%;
 }
@@ -7,8 +13,6 @@ body, html {
     color: #FEA02F;
     border-radius: 10px;
 }
-
-
 
 .nav-text {
     color:#FEA02F;

@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "oldNewspaperTypes";
+    src: local("oldNewspaperTypes"), url('../fonts/old_newspaper_types.ttf');
+}
+
+body {
+    font-family: "oldNewspaperTypes";
+}
+
 .orange-text {
     color: #FEA02F;
 }
