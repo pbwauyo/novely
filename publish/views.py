@@ -11,3 +11,6 @@ def accept_license(request):
 
 def publish_done(request):
     return render(request, 'publish/publish_done.html', {})
+
+def new_audio(request):
+    return render(request, 'publish/new_audio.html', {})

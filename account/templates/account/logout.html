@@ -18,7 +18,7 @@
         </button>
 
         <h6 class="light-green-text mt-4 mb-1">Before you go! Support us if you like Novely</h6>
-        <button class="orange-text borderless-button green-background rounded-corners shadow py-2 px-3">
+        <button class="orange-text borderless-button green-background rounded-corners shadow py-2 px-3" type="buton" data-toggle="modal" data-target="#donate">
             Donate to <img src="{% static 'images/logo_circles.png' alt="logo circles"%}" width=10 height=15><span class="orange-text">Novely</span></img>
         </button>
     </div>
@@ -56,6 +56,34 @@
                                         </button>
                                     </div>   
 
+                                </div>
+                            </div>
+                        </div>
+                    <div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+        <div class="modal fade" id="donate" role="dialog" tabindex="-1" aria-labelledby="lable" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content shadow rounded-corners">
+                    <div class="modal-body green-background">
+                        <div class="container-fluid ">
+                            <div class="row">
+                                <div class="col align-items-center">
+                                    <h5 class="orange-text">Donate</h5>
+                                    <h6 class="light-green-text">Novely means sharing life-long experiences, cultures and stories. In a world dominated by fast news, fake stories and low time of attention, Novely stands to connect people the slow way. Share opinions, discuss facts and looking for the truth. Novels have the power to change how we see others, to teach us before acting, to grow together including. Not dividing.</h6>
+                                    <span class="light-green-text">If you feel this is the right way to pursue, then contribute and be part of it.</span>
+                                    
+                                    <div class="d-flex justify-content-center mt-2">
+                                        <div class="orange-background text-center rounded-corners" style="width:200px;">
+                                            <h6 style="color:white;">Donate with</h6>
+                                            <img src="{% static 'account/images/paypal.svg' %}" width=80 height=30>
+                                        </div>   
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>

@@ -27,8 +27,8 @@ class AccountManager(BaseUserManager):
         return user
 
 class Account (AbstractBaseUser):
-    name = models.CharField(max_length=20)
-    email = models.EmailField(max_length=20, unique=True)
+    name = models.CharField(max_length=40)
+    email = models.EmailField(max_length=40, unique=True)
     profile_image = models.ImageField(verbose_name='profile image', upload_to = "uploads/users/profile_images", null=True, blank=True)
     is_superuser = models.BooleanField(verbose_name='is superuser' ,default = False)
     is_staff = models.BooleanField(verbose_name='is staff', default=True)
