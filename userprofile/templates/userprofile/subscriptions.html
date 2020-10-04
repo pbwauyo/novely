@@ -21,36 +21,28 @@
             <img class="align-self-center" src="{% static 'userprofile/images/question.svg' %}" width=30 height=30 data-toggle="tooltip" data-placement="auto" title="N-CODE lets you share the hours in your Hours plan to  purchase Novely Gold, the premium membership of Novely. Share N-CODE with whoever you prefer and enjoy Novely together!">
         </div>
 
-        <div class="d-sm-flex mt-3">
-            <a class="mr-4" href="{% url 'subscription-hours' %}">
-                <div class="d-flex flex-column orange-border rounded-corners" style="height:260px; width:310px;">
-                    <div class="orange-background  px-2 py-1 rounded-corners" style="height:100px;">
-                        <h4 class="green-text font-weight-bold text-center">Hours</h4>
-                        <h6 class="green-text">Access all Novely content for a set amount of hours.<br/>
-                            <span class="font-weight-bold green-text">No deadlines, no pressures! Share it*</span>
-                        </h6>
-                    </div>
-                    
-                    <div class="shadow rounded-corners align-self-center mt-3 d-flex flex-column justify-content-center align-items-center" style="height: 110px; width:230px;">
+        <div class="d-sm-flex flex-column mt-3 orange-border justify-content-center rounded-corners">
+            <div class="orange-background text-center">
+                <h3 class="green-text">Golden Hours</h3>
+                <h4 class="green-text">Access all Novely content for all the hours you prefer.</h4>
+                <h6 class="green-text font-weight-bold">No deadlines, no pressures! Share it*</h6>
+            </div>
+
+            <div class="d-sm-flex justify-content-center my-4">
+                <a class="mr-4" href="{% url 'subscription-100' %}">
+                    <div class="shadow rounded-corners align-self-center mt-3 d-flex flex-column justify-content-center align-items-center" style="height: 200px; width:300px;">
                         <h5 class="orange-text">100 hours  -  € 1099</h5>
                         <h6 class="orange-text text-center">of effective listening</h6>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="{% url 'subscription-days' %}">
-                <div class="d-flex flex-column orange-border rounded-corners" style="height:260px; width:310px">
-                    <div class="orange-background  px-2 py-1 rounded-corners" style="height:100px;">
-                        <h4 class="green-text font-weight-bold text-center">Days</h4>
-                        <h6 class="green-text">Access all Novely content for a period of time.<br/>
-                            <span class="font-weight-bold green-text">All yours, no worries!</span>
-                        </h6>
+                <a href="{% url 'subscription-200' %}">
+                    <div class="shadow rounded-corners align-self-center mt-3 d-flex flex-column justify-content-center align-items-center" style="height: 200px; width:300px;">
+                        <h5 class="orange-text">200 hours  -  € 2299</h5>
+                        <h6 class="orange-text text-center">of effective listening</h6>
                     </div>
-                    <div class="shadow rounded-corners align-self-center mt-3 d-flex flex-column justify-content-center align-items-center" style="height: 110px; width:230px;">
-                        <h5 class="orange-text text-center">30 days  -  € 1099</h5>
-                    </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
 
         <div class="mt-2 orange-text" style="max-width: 250px;">
