@@ -44,3 +44,6 @@ def logout_view(request):
 def logout_user(request):
     logout
     return redirect('login')
+
+def login_initial(request):
+    return render(request, 'account/login_initial.html', {'range' : range(10), 'suggestions' : range(50)})

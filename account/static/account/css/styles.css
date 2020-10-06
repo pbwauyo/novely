@@ -15,11 +15,15 @@ input.auth-input {
 }
 
 .green-text {
-    color: #2EBCBC;
+    color:  #007A7A;
 }
 
 .orange-text {
     color: #FEA02F;
+}
+
+.orange-background {
+    background-color: #FEA02F;
 }
 
 .submit-btn {
@@ -53,3 +57,28 @@ input.auth-input {
     list-style-type: none;
     color: red;
 }
+
+.image-header {
+    height: 250px;
+    background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("../images/login_background.png");
+}
+
+.green-background{
+    background-color:#007A7A;
+}
+
+.rounded-corners {
+    border-radius: 8px;
+}
+
+.rounded-corners-left {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.rounded-corners-right {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;;
+}
+
+

@@ -39,6 +39,10 @@ a {
     color: #2EBCBC;
 }
 
+.green-input-placeholder::placeholder{
+    color: #007A7A;
+}
+
 .light-green-input{
     color: white;
 }
@@ -83,3 +87,30 @@ input, textarea {
     width: 100%;
     display: block;
 }
+
+.horizontal-div::-webkit-scrollbar {
+    display: none;
+}
+
+.black-background {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.horizontal-div {
+    width: 100%; 
+    white-space: nowrap; 
+    position: relative; 
+    overflow-x: scroll; 
+    overflow-y: hidden;  
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.audio-div {
+    float: none; 
+    display: inline-block; 
+    width:220px;
+}
+
+

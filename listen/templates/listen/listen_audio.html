@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href={% static 'css/shared_styles.css' %}>
+{% endblock css %}
+
+{% block content %}
+
+    <button class=" borderless-button green-background rounded-corners shadow my-2 ml-4 py-2">
+        <a class="orange-text"><img src="{% static 'publish/images/left_arrow.svg'%}" width=20 height=20> Get Back</a>
+    </button>
+    <div class="d-flex ml-4 my-3">
+        <img class="mr-4" src={% static 'publish/images/sample_book.png' %} alt="" width=200px height=200px>
+        <div class="d-flex flex-column">
+            <h2 class="orange-text">Muscle</h2>
+            <h4 class="orange-text">by Alan Trotter</h4>
+            <h4 class="light-green-text">voice Alan Trotter</h4>
+            <button class=" borderless-button green-background rounded-corners shadow my-2 py-2" type="buton" data-toggle="modal" data-target="#novelyGold">
+                <a class="orange-text"><img src="{% static 'publish/images/play_button.svg'%}" width=20 height=20> Listen</a>
+            </button>
+        </div>
+    </div>
+
+    <div class="d-flex mx-4 my-3 light-green-text">
+        With Muscle, the Scottish writer Alan Trotter has written the book my friends were 
+        recommending – or, at least, the one I thought they were recommending. It does 
+        what City of Glass promised to do: takes Raymond Chandler, Albert Camus, Philip ...more
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <a>
+            <div class="orange-border green-background orange-text rounded-corners my-2 py-2 px-4">
+                Report violation!
+            </div>
+        </a>
+    </div>
+    
+
+{% endblock content %}
+
+{% block modal %}
+
+    </div>
+        <div class="modal fade" id="novelyGold" role="dialog" tabindex="-1" aria-labelledby="lable" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content shadow rounded-corners">
+                    <div class="modal-body green-background">
+                        <div class="container-fluid ">
+                            <div class="row">
+                                <div class="col align-items-center">
+                                    <img src="{% static 'images/logo_circles.png' alt="logo circles"%}" width=10 height=15><span class="nav-text">Novely Gold</span></img>
+                                    <h5 class="orange-text">The content you want to hear is limited. To listen to it, access all the contents</h5>
+                                    <div class="d-flex justify-content-center">
+                                        <a href={% url 'subscriptions' %}>
+                                            <button class="green-text borderless-button mt-3 orange-background rounded-corners shadow py-2 px-5">
+                                                I want All contents
+                                            </button>
+                                        </a>
+                                    </div>   
+
+                                </div>
+                            </div>
+                        </div>
+                    <div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock modal %}

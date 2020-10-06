@@ -2,70 +2,69 @@
 
 {% block css %}
     {% load static %}
-    <link rel="stylesheet" type="text/css" href={% static 'css/shared_styles.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'css/shared_styles.css' %}/>
 {% endblock css %}
 
 {% block content %}
+     <div>
+        <h3 class="orange-text ml-4 mt-3">Listen to your favourite Novel</h3>
+        <div class="mb-3 ml-2" style="background-color: #FEA02F; max-width:250px; height:3px;"></div>
 
-    <button class=" borderless-button green-background rounded-corners shadow my-2 ml-4 py-2">
-        <a class="orange-text"><img src="{% static 'publish/images/left_arrow.svg'%}" width=20 height=20> Get Back</a>
-    </button>
-    <div class="d-flex ml-4 my-3">
-        <img class="mr-4" src={% static 'publish/images/sample_book.png' %} alt="" width=200px height=200px>
-        <div class="d-flex flex-column">
-            <h2 class="orange-text">Muscle</h2>
-            <h4 class="orange-text">by Alan Trotter</h4>
-            <h4 class="light-green-text">voice Alan Trotter</h4>
-            <button class=" borderless-button green-background rounded-corners shadow my-2 py-2" type="buton" data-toggle="modal" data-target="#novelyGold">
-                <a class="orange-text"><img src="{% static 'publish/images/play_button.svg'%}" width=20 height=20> Listen</a>
-            </button>
+        <div class="d-flex pl-4">
+            <input class="green-input-placeholder borderless-button rounded-corners light-green-bg" placeholder="Search..." style="width:400px;">
+            <div class="green-background shadow py-2 px-2 rounded-corners ml-2">
+                <img src="{% static 'listen/images/search.svg' %}" height="32px" width="32px">
+            </div>
+        </div>
+
+        <div class="horizontal-div black-background mt-3 mb-2">
+            <h5 class="orange-text ml-4">Already started</h5>
+            {% for number in range %}
+                <a href="{% url 'listen-audio' %}"><div class="card shadow green-background mb-4 audio-div">
+                    <img class="card-img-top" alt="sample image" src="{% static 'listen/images/sample_book.png' %}" height=160>
+                    <div class="card-body">
+                        <h5 class="card-title orange-text">Title here</h5>
+                        <h6 class="orange-text">Author here </h6>
+                    </div>
+                </a></div>
+            {% endfor %}    
+        </div>
+
+        <div class="horizontal-div mt-1 mb-2">
+            {% for number in range %}
+                <a href="{% url 'listen-audio' %}"><div class="card shadow green-background mb-4 audio-div">
+                    <img class="card-img-top" alt="sample image" src="{% static 'listen/images/sample_book.png' %}" height=160>
+                    <div class="card-body">
+                        <h5 class="card-title orange-text">Title here</h5>
+                        <h6 class="orange-text">Author here </h6>
+                    </div>
+                </a></div>
+            {% endfor %}    
+        </div>
+
+        <div class="horizontal-div mt-1 mb-2">
+            {% for number in range %}
+                <a href="{% url 'listen-audio' %}"><div class="card shadow green-background mb-4 audio-div">
+                    <img class="card-img-top" alt="sample image" src="{% static 'listen/images/sample_book.png' %}" height=160>
+                    <div class="card-body">
+                        <h5 class="card-title orange-text">Title here</h5>
+                        <h6 class="orange-text">Author here </h6>
+                    </div>
+                </a></div>
+            {% endfor %}    
+        </div>
+
+        <div class="horizontal-div mt-1 mb-4">
+            {% for number in range %}
+                <a href="{% url 'listen-audio' %}"><div class="card shadow green-background mb-4 audio-div">
+                    <img class="card-img-top" alt="sample image" src="{% static 'listen/images/sample_book.png' %}" height=160>
+                    <div class="card-body">
+                        <h5 class="card-title orange-text">Title here</h5>
+                        <h6 class="orange-text">Author here </h6>
+                    </div>
+                </a></div>
+            {% endfor %}    
         </div>
     </div>
-
-    <div class="d-flex mx-4 my-3 light-green-text">
-        With Muscle, the Scottish writer Alan Trotter has written the book my friends were 
-        recommending – or, at least, the one I thought they were recommending. It does 
-        what City of Glass promised to do: takes Raymond Chandler, Albert Camus, Philip ...more
-    </div>
-
-    <div class="d-flex justify-content-center">
-        <a>
-            <div class="orange-border green-background orange-text rounded-corners my-2 py-2 px-4">
-                Report violation!
-            </div>
-        </a>
-    </div>
-    
 
 {% endblock content %}
-
-{% block modal %}
-
-    </div>
-        <div class="modal fade" id="novelyGold" role="dialog" tabindex="-1" aria-labelledby="lable" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content shadow rounded-corners">
-                    <div class="modal-body green-background">
-                        <div class="container-fluid ">
-                            <div class="row">
-                                <div class="col align-items-center">
-                                    <img src="{% static 'images/logo_circles.png' alt="logo circles"%}" width=10 height=15><span class="nav-text">Novely Gold</span></img>
-                                    <h5 class="orange-text">The content you want to hear is limited. To listen to it, access all the contents</h5>
-                                    <div class="d-flex justify-content-center">
-                                        <a href={% url 'subscriptions' %}>
-                                            <button class="green-text borderless-button mt-3 orange-background rounded-corners shadow py-2 px-5">
-                                                I want All contents
-                                            </button>
-                                        </a>
-                                    </div>   
-
-                                </div>
-                            </div>
-                        </div>
-                    <div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-{% endblock modal %}

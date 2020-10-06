@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+        <link rel="stylesheet" type="text/css" href= "{% static 'css/main-styles.css'%}"/>
+        <link rel="stylesheet" type="text/css" href= "{% static 'css/shared_styles.css'%}"/>
+        <link rel="stylesheet" type="text/css" href= "{% static 'account/css/styles.css'%}"/>
+    </head>
+
+    <body>
+        <div class="d-flex flex-column justify-content-between" style="height: 100%;">
+            <div>
+                <header>
+                    <div class="d-flex flex-column image-header justify-content-between" >
+                        <div class="d-flex justify-content-center">
+                            <h2 class="novely-header shadow px-2 py-2 green-background round-border"><span>Novely</span> share your story. out loud!</h2>
+                        </div>
+
+                        <div>
+                            <h5 class="orange-text ml-4">Some text here about the product</h5>
+                            <h6 class="orange-text ml-4 mt-3">Some text here about the product Some text here about the product</h6>
+                            <h6 class="orange-text ml-4">Some text here about the product Some text here about the product</h6>
+                            <h6 class="orange-text ml-4">Some text here about the product</h6>
+                        </div>
+
+                        <span class="orange-text ml-4" style="font-size:12px;">Some text here about the product</span>
+                    </div>
+                </header>
+
+                <div class="d-flex justify-content-center mt-4">
+                    <a class="green-text orange-background rounded-corners px-4 py-1 " style="font-size:25px; height:45px;" href="{% url 'login' %}">
+                    Login
+                    </a>
+                </div>
+
+                <h5 class="orange-text ml-4 mt-3">Start listening free content or subscribe for all the contents</h5>
+
+                <div class="d-flex pl-4">
+                    <input class="green-input-placeholder borderless-button rounded-corners light-green-bg" placeholder="Search..." style="width:400px;">
+                    <div class="green-background shadow py-2 px-2 rounded-corners ml-2">
+                        <img src="{% static 'account/images/search.svg' %}" height="32px" width="32px">
+                    </div>
+                </div>
+
+                <div class="horizontal-div mt-3 mb-2">
+                    {% for number in range %}
+                        <a href="{% url 'listen-audio' %}"><div class="card shadow green-background mb-4 audio-div">
+                            <img class="card-img-top" alt="sample image" src="{% static 'account/images/sample_book.png' %}" height=160>
+                            <div class="card-body">
+                                <h5 class="card-title orange-text">Title here</h5>
+                                <h6 class="orange-text">Author here </h6>
+                            </div>
+                        </a></div>
+                    {% endfor %}    
+                </div>
+
+               <div class="horizontal-div mt-1 mb-2">
+                    {% for number in range %}
+                        <a href="{% url 'listen-audio' %}"><div class="card shadow green-background mb-4 audio-div">
+                            <img class="card-img-top" alt="sample image" src="{% static 'account/images/sample_book.png' %}" height=160>
+                            <div class="card-body">
+                                <h5 class="card-title orange-text">Title here</h5>
+                                <h6 class="orange-text">Author here </h6>
+                            </div>
+                        </a></div>
+                    {% endfor %}    
+                </div>
+
+                <div class="horizontal-div mt-1 mb-2">
+                    {% for number in range %}
+                        <a href="{% url 'listen-audio' %}"><div class="card shadow green-background mb-4 audio-div">
+                            <img class="card-img-top" alt="sample image" src="{% static 'account/images/sample_book.png' %}" height=160>
+                            <div class="card-body">
+                                <h5 class="card-title orange-text">Title here</h5>
+                                <h6 class="orange-text">Author here </h6>
+                            </div>
+                        </a></div>
+                    {% endfor %}    
+                </div>
+
+                <div class="horizontal-div mt-1 mb-4">
+                    {% for number in range %}
+                        <a href="{% url 'listen-audio' %}"><div class="card shadow green-background mb-4 audio-div">
+                            <img class="card-img-top" alt="sample image" src="{% static 'account/images/sample_book.png' %}" height=160>
+                            <div class="card-body">
+                                <h5 class="card-title orange-text">Title here</h5>
+                                <h6 class="orange-text">Author here </h6>
+                            </div>
+                        </a></div>
+                    {% endfor %}    
+                </div>
+                
+            </div>
+
+            <footer class='footer'>
+                <div class='text-center'>
+                    <h5 class="footer-text">Made with <img src = "{% static 'images/heart.png'%}" width=25 height=25/> by Novely for you</h5>
+                </div>
+            </footer>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
+
+</html>
