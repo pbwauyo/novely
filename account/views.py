@@ -13,7 +13,7 @@ def login_view(request):
 
             if user:
                 login(request, user)
-                return redirect('home')
+                return redirect('listen')
 
     else:
         form = AccountAuthenticationForm()
@@ -31,7 +31,7 @@ def signup_view(request):
             password = form.cleaned_data['password1']
             user = authenticate(email=email, password=password)
             login(request, user)
-            return redirect('home')
+            return redirect('listen')
 
     else: 
         form = AccountCreationForm()
