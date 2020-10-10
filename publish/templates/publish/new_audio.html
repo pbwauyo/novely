@@ -2,33 +2,42 @@
 
 {% block css %}
     {% load static %}
+    
     <link rel="stylesheet" type="text/css" href="{% static 'publish/css/publish-styles.css' %}">
 {% endblock css %}
 
+{% block script %}
+    {% load static %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'publish/js/publish.js' %}"></script>
+{% endblock script %}
+
 {% block content %}
+    <p>{{audio_form.errors}}</p>
     <button class=" borderless-button green-background rounded-corners shadow my-2 ml-3 py-2">
         <a class="orange-text"><img src="{% static 'publish/images/left_arrow.svg'%}" width=20 height=20> Get Back</a>
     </button>
 
-    <div class="ml-5">
+    <form class="ml-5" enctype="multipart/form-data" method="post" action="/publish/new-audio/"> {% csrf_token %}
         <h5 class="orange-text mt-2">Cover, title, author, entry</h5>
 
         <div class="d-flex justify-content-start">
             <div>
-                <img src="{% static 'publish/images/image_placeholder.svg' %}" width=180 height=180>
-                <a class="add"><img class="green-transparent-background px-2 py-2 rounded-corners" src="{% static 'publish/images/add.svg' %}" width=40 height=40></a>
+                <img id="audio-cover-img" class="rounded-corners" src="{% static 'publish/images/image_placeholder.svg' %}" width=180 height=180>
+                <input type="file" accept="image/*" id="choose-audio-cover" style="display:none;" name="audio-cover">
+                <a id="upload-audio-cover" class="add"><img class="green-transparent-background px-2 py-2 rounded-corners" src="{% static 'publish/images/add.svg' %}" width=40 height=40></a>
             </div>
 
             <div class='container mx-0 mt-3' style="width: 200px;" >
                 <div class="d-flex flex-column">
                     <div class="">
-                        <input class=" green-transparent-background borderless-button rounded-corners orange-input pl-2" placeholder="Title">
+                        <input class=" green-transparent-background borderless-button rounded-corners orange-input pl-2" name="title" placeholder="Title">
                     </div>
                     <div class="my-3 d-flex">
-                        <label class="orange-text " for="author">by</label><input class="green-transparent-background borderless-button rounded-corners orange-input" placeholder="Author" id="author">            
+                        <label class="orange-text " for="author">by</label><input class="green-transparent-background borderless-button rounded-corners orange-input" name="author" placeholder="Author" id="author">            
                     </div>
                     <div class="d-flex">
-                        <label class="light-green-text" for="voice">voice</label><input class="green-transparent-background borderless-button rounded-corners light-green-input" placeholder="Voice" id="voice">
+                        <label class="light-green-text" for="voice">voice</label><input class="green-transparent-background borderless-button rounded-corners light-green-input" name="voice" placeholder="Voice" id="voice">
                     </div>
                 </div>
                 
@@ -39,15 +48,16 @@
 
         <div class="container-fluid mx-0">
             <div class="row mr-5">
-                <textarea class="col-12 green-transparent-background borderless-button rounded-corners light-green-input light-green-text" placeholder="Scrivi qui la descrizione" style="height:100px;"></textarea>
+                <textarea class="col-12 green-transparent-background borderless-button rounded-corners light-green-input light-green-text" placeholder="Scrivi qui la descrizione" name="description" style="height:100px;"></textarea>
             </div>
         </div>
 
         <h5 class="orange-text mt-2">File audio (mp3)</h5>
 
         <div class="d-flex">
-            <div class="green-transparent-background rounded-corners mr-1 light-green-text pl-2" style="width: 250px;">vuoto</div>
-            <a><img class="green-transparent-background px-2 py-2 rounded-corners" src="{% static 'publish/images/add.svg' %}" width=40 height=40></a>
+            <div id="audio-file-name" class="green-transparent-background rounded-corners mr-1 light-green-text pl-2" style="width: 250px;">vuoto</div>
+            <input type="file" accept="audio/*" id="choose-audio-file" style="display:none;" name="audio-file">
+            <a id="upload-audio-file"><img class="green-transparent-background px-2 py-2 rounded-corners" src="{% static 'publish/images/add.svg' %}" width=40 height=40></a>
         </div>
 
         <div class="d-flex align-items-center">
@@ -71,16 +81,10 @@
             </div>
         </div>
         
-        <a href={% url 'publish-new' %}>
-            <button class="green-text borderless-button orange-background rounded-corners shadow my-3 py-2 px-3" style="width:200px;">
-                Publish changes
-            </button>
-        </a>
+        <button class="green-text borderless-button orange-background rounded-corners shadow my-3 py-2 px-3" style="width:200px;">
+            Publish changes
+        </button>
                     
-    </div>
-
-    
-    
-
-
+    </form>
+ 
 {% endblock content %}
