@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import cloudinary
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'publish',
     'userprofile',
     'listen',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +137,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 AUTH_USER_MODEL = 'account.Account'
+
+cloudinary.config(
+  cloud_name = 'dwjaf5nwq',
+  api_key = '126662453822155',
+  api_secret = '0UA3lmzo4txV1cEcz2rbRciv3x0',
+  secure = True
+)
