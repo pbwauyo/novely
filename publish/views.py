@@ -4,10 +4,12 @@ from . import models
 import cloudinary
 
 def publish(request):
-    return render(request, 'publish/publish.html', {})
+    audios = models.AudioFile.objects.all().filter(pk=request.user.id)
+    return render(request, 'publish/publish.html', {'audios' : audios})
 
-def publish_new(request):
-    return render(request, 'publish/publish_new.html', {})
+def publish_new(request, pk):
+    audio_file = models.AudioFile.objects.get(pk=pk)
+    return render(request, 'publish/publish_new.html', {'audio_file' : audio_file})
 
 def accept_license(request, pk):
     return render(request, 'publish/accept_license.html', {'audio_file_id' : pk})
