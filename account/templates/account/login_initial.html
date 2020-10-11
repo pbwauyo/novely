@@ -47,48 +47,48 @@
                 </div>
 
                 <div class="horizontal-div mt-3 mb-2">
-                    {% for number in range %}
-                        <a href="{% url 'login' %}"><div class="card shadow green-background mb-4 audio-div">
-                            <img class="card-img-top" alt="sample image" src="{% static 'account/images/sample_book.png' %}" height=160>
+                    {% for audio in audios %}
+                        <a href="{% url 'listen-audio' audio.id%}"><div class="card shadow rounded-corners green-background mb-4 audio-div">
+                            <img class="card-img-top" alt="sample image" src="{{audio.audio_cover_url}}" height=160>
                             <div class="card-body">
-                                <h5 class="card-title orange-text">Title here</h5>
-                                <h6 class="orange-text">Author here </h6>
+                                <h5 class="card-title orange-text">{{audio.title}}</h5>
+                                <h6 class="orange-text">{{audio.author}}</h6>
                             </div>
                         </a></div>
                     {% endfor %}    
                 </div>
 
-               <div class="horizontal-div mt-1 mb-2">
-                    {% for number in range %}
-                        <a href="{% url 'login' %}"><div class="card shadow green-background mb-4 audio-div">
-                            <img class="card-img-top" alt="sample image" src="{% static 'account/images/sample_book.png' %}" height=160>
+               <div class="horizontal-div mt-3 mb-2">
+                    {% for audio in audios %}
+                        <a href="{% url 'listen-audio' audio.id%}"><div class="card shadow rounded-corners green-background mb-4 audio-div">
+                            <img class="card-img-top" alt="sample image" src="{{audio.audio_cover_url}}" height=160>
                             <div class="card-body">
-                                <h5 class="card-title orange-text">Title here</h5>
-                                <h6 class="orange-text">Author here </h6>
+                                <h5 class="card-title orange-text">{{audio.title}}</h5>
+                                <h6 class="orange-text">{{audio.author}}</h6>
                             </div>
                         </a></div>
                     {% endfor %}    
                 </div>
 
-                <div class="horizontal-div mt-1 mb-2">
-                    {% for number in range %}
-                        <a href="{% url 'login' %}"><div class="card shadow green-background mb-4 audio-div">
-                            <img class="card-img-top" alt="sample image" src="{% static 'account/images/sample_book.png' %}" height=160>
+                <div class="horizontal-div mt-3 mb-2">
+                    {% for audio in audios %}
+                        <a href="{% url 'listen-audio' audio.id%}"><div class="card shadow rounded-corners green-background mb-4 audio-div">
+                            <img class="card-img-top" alt="sample image" src="{{audio.audio_cover_url}}" height=160>
                             <div class="card-body">
-                                <h5 class="card-title orange-text">Title here</h5>
-                                <h6 class="orange-text">Author here </h6>
+                                <h5 class="card-title orange-text">{{audio.title}}</h5>
+                                <h6 class="orange-text">{{audio.author}}</h6>
                             </div>
                         </a></div>
                     {% endfor %}    
                 </div>
 
-                <div class="horizontal-div mt-1 mb-4">
-                    {% for number in range %}
-                        <a href="{% url 'login' %}"><div class="card shadow green-background mb-4 audio-div">
-                            <img class="card-img-top" alt="sample image" src="{% static 'account/images/sample_book.png' %}" height=160>
+                <div class="horizontal-div mt-3 mb-2">
+                    {% for audio in audios %}
+                        <a href="{% url 'listen-audio' audio.id%}"><div class="card shadow rounded-corners green-background mb-4 audio-div">
+                            <img class="card-img-top" alt="sample image" src="{{audio.audio_cover_url}}" height=160>
                             <div class="card-body">
-                                <h5 class="card-title orange-text">Title here</h5>
-                                <h6 class="orange-text">Author here </h6>
+                                <h5 class="card-title orange-text">{{audio.title}}</h5>
+                                <h6 class="orange-text">{{audio.author}}</h6>
                             </div>
                         </a></div>
                     {% endfor %}    

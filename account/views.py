@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import AccountChangeForm, AccountCreationForm, AccountAuthenticationForm
 from django.contrib.auth import authenticate, login, logout
+from publish.models import AudioFile
 
 def login_view(request):
 
@@ -46,4 +47,5 @@ def logout_user(request):
     return redirect('login')
 
 def login_initial(request):
-    return render(request, 'account/login_initial.html', {'range' : range(10), 'suggestions' : range(50)})
+    audios = AudioFile.objects.all()
+    return render(request, 'account/login_initial.html', {'audios' : audios})

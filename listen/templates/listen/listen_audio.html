@@ -3,7 +3,19 @@
 {% block css %}
     {% load static %}
     <link rel="stylesheet" type="text/css" href={% static 'css/shared_styles.css' %}>
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
 {% endblock css %}
+
+{% block script %}
+    {% load static %}
+
+    <script>
+        var audio_url = "{{audio.audio_url}}"
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="{% static 'listen/js/listen.js' %}"></script>
+{% endblock script %}
 
 {% block content %}
 
@@ -11,21 +23,19 @@
         <a class="orange-text"><img src="{% static 'publish/images/left_arrow.svg'%}" width=20 height=20> Get Back</a>
     </button>
     <div class="d-flex ml-4 my-3">
-        <img class="mr-4" src={% static 'publish/images/sample_book.png' %} alt="" width=200px height=200px>
+        <img class="mr-4" src="{{audio.audio_cover_url}}" alt="" width=200px height=200px>
         <div class="d-flex flex-column">
-            <h2 class="orange-text">Muscle</h2>
-            <h4 class="orange-text">by Alan Trotter</h4>
-            <h4 class="light-green-text">voice Alan Trotter</h4>
-            <button class=" borderless-button green-background rounded-corners shadow my-2 py-2" type="buton" data-toggle="modal" data-target="#novelyGold">
+            <h2 class="orange-text">{{audio.title}}</h2>
+            <h4 class="orange-text">by {{audio.author}}</h4>
+            <h4 class="light-green-text">voice {{audio.voice}}</h4>
+            <button class=" borderless-button green-background rounded-corners shadow my-2 py-2" type="buton" data-toggle="modal" data-target="#playContent">
                 <a class="orange-text"><img src="{% static 'publish/images/play_button.svg'%}" width=20 height=20> Listen</a>
             </button>
         </div>
     </div>
 
     <div class="d-flex mx-4 my-3 light-green-text">
-        With Muscle, the Scottish writer Alan Trotter has written the book my friends were 
-        recommending – or, at least, the one I thought they were recommending. It does 
-        what City of Glass promised to do: takes Raymond Chandler, Albert Camus, Philip ...more
+        {{audio.description}}
     </div>
 
     <div class="d-flex justify-content-center">
@@ -59,6 +69,29 @@
                                         </a>
                                     </div>   
 
+                                </div>
+                            </div>
+                        </div>
+                    <div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     </div>
+        <div class="modal fade" id="playContent" role="dialog" tabindex="-1" aria-labelledby="lable" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content shadow rounded-corners">
+                    <div class="modal-body green-background">
+                        <div class="container-fluid ">
+                            <div class="d-flex">
+                                <a id="rewind"><img src="{% static 'listen/images/rewind.svg' %}" height=50 width=50></a>
+                                <a id="play" class="align-self-center ml-2"><img src="{% static 'listen/images/play.svg' %}" height=30 width=30></a>
+                                <a id="forward" class="mr-2"><img src="{% static 'listen/images/forward.svg' %}" height=50 width=50></a>
+                                <a id="fast_forward"><img src="{% static 'listen/images/fast_forward.svg' %}" height=50 width=50></a>
+                                <div class="ml-2 d-flex flex-column mt-3 flex-grow-1">
+                                    <div id="slider"></div>
+                                    <div id="duration" class="light-green-text align-self-end mt-1"></div>
                                 </div>
                             </div>
                         </div>
