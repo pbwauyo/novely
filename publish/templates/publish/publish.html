@@ -13,7 +13,7 @@
         <div style="background-color: #FEA02F; max-width:250px; height:3px;"></div>    
     </div>
 
-    <div class="container-fluid orange-background mt-3 rounded-corners" style="height: 250;">
+    <div class="container-fluid orange-background mt-3 rounded-corners">
         <div>
             <h5 class="green-text font-weight-bold">Pubblica nuovo contenuto! *</h5>
             <h6 class="green-text">Pubblica e guadagna dai tuoi contenuti</h6>
@@ -65,7 +65,7 @@
         {% for audio in audios %}
             <a href="{% url 'publish-new' audio.id%}"><div class="card shadow rounded-corners green-background mb-4 audio-div">
                 <img class="card-img-top" alt="sample image" src="{{audio.audio_cover_url}}" height=160>
-                <div class="card-body">
+                <div class="card-body" style="white-space: initial;">
                     <h5 class="card-title orange-text">{{audio.title}}</h5>
                     <h6 class="orange-text">{{audio.author}}</h6>
                 </div>

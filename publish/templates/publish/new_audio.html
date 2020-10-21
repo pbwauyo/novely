@@ -21,7 +21,7 @@
     <form class="ml-5" enctype="multipart/form-data" method="post" action="/publish/new-audio/"> {% csrf_token %}
         <h5 class="orange-text mt-2">Cover, title, author, entry</h5>
 
-        <div class="d-flex justify-content-start">
+        <div class="d-sm-flex justify-content-start">
             <div>
                 <img id="audio-cover-img" class="rounded-corners" src="{% static 'publish/images/image_placeholder.svg' %}" width=180 height=180>
                 <input type="file" accept="image/*" id="choose-audio-cover" style="display:none;" name="audio-cover">
